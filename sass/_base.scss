@@ -1,0 +1,77 @@
+:root {
+    --color-dark-brown-1: #746558;
+    --color-dark-brown-2: #65594d;
+    --color-dark-brown-3: #574c42;
+    --color-dark-brown-4: #342e28;
+    --color-dark-brown-5: #4C3219;
+
+    --color-light-beige-1: #b0a397;
+    --color-light-beige-2: #c1b7ad;
+
+    --color-white: #ffffff;
+    --color-white-light: #f9f7f6;
+
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-light: 0 2rem 4rem rgba(0,0,0,.06);
+
+    --line: 1px solid var(--color-green-light-2);
+
+    $font-primary: 'Nunito', sans-serif;
+    $font-display: 'Josefin Sans',sans-serif;
+
+    
+    
+}
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;  // 1200px
+$bp-medium: 50em; // 800px
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //   1rem= 10px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-dark-brown-5);
+    //background-image: linear-gradient(to right bottom, var(--color-light-beige-1), var(--color-light-beige-2));
+    //background-image: url(../img/back4.jpg);
+    background-color: var(--color-white);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    min-height: 150vh;
+}
+
+.second-lead {
+
+    
+    background-color: #fff;
+
+    display: grid;
+    grid-template-rows: 80vh min-content 40vw repeat(3,min-content);
+    grid-template-columns: [sidebar-start] 0rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] 
+    repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+
+}
